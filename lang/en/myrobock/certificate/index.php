@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'title' => 'Company verification status',
+    'content' => [
+        'status' => 'Status',
+        'gos' => 'Go to your store',
+        'gom' => 'Go to the messenger',
+        'goi' => 'Go to edit the company information',
+        'data' => 'Supplied data',
+        'we' => 'We found a problem',
+        'please' => 'Please, check the errors below',
+        'name' => "Company's name",
+        'foundation' => 'Company foundation',
+        'quantity' => 'Quantity of employees',
+        'tax' => 'Tax id number',
+        'address' => 'Address',
+        'zip' => 'Zip code',
+        'phone' => 'Business phone',
+        'about' => 'About',
+        'description' => 'Company description',
+        'categories' => 'Business categories',
+        'choose' => 'Choose an option...',
+        'country' => 'Country',
+        'state' => 'State',
+        'send' => 'Edit your company information',
+        'home' => 'Home',
+        'view' => 'view document',
+        'history' => 'Associated history',
+    ],
+];

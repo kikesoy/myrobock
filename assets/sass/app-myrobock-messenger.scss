@@ -1,0 +1,80 @@
+.nav-action-mail{
+    i{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.kpi-mail-received{
+    background: #455a64;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.kpi-mail-closed{
+    background: #9e9e9e;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.kpi-mail-send{
+    background: #00c853;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.kpi-mail-new{
+    background: #b71c1c;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.kpi-mail-read{
+    background: #2196f3;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.kpi-mail-wait{
+    background: #ff7043;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.input-create-message{
+    color: #fff; 
+    background-color: #190333;
+}
+
+.flex-space-between{
+    justify-content: space-between;
+}
+
+.content-show-message{
+    max-height: 280px; 
+    overflow: auto;
+}
+
+.bubble-message-show-cli{
+    max-width: 35rem; 
+    margin-left: 45%;
+}
+
+.logo-msg-show{
+    width: 60%;
+    background-color: #91c136;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.content-chat{
+    margin-top: 10px; 
+    height: 130px; 
+    overflow: auto;
+}

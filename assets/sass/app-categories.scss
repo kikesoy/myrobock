@@ -1,0 +1,32 @@
+// Lista de categorias
+.cat-list{
+    line-height: 1;
+
+    .cat-list-header{
+        background: $robo-violet;
+        color: $white;
+        margin:0;
+        padding: $spacer;
+
+        .cat-list-title{
+            margin:0;
+        }
+    }
+    .cat-list-list{
+        background: $white;
+        list-style: none;
+        margin:0;
+        padding:0;
+        border:none;
+        font-size: 85%;
+
+        li{
+            padding: $spacer;
+        }
+
+        a{
+            color:$robo-violet;
+        }
+
+    }
+}

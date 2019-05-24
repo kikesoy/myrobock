@@ -1,0 +1,178 @@
+// Categories Menu
+.cat-menu{
+    display: none;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    overflow: hidden;
+    z-index: 10000;
+
+    .cat-menu-overlay{
+        position: fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background: $robo-violet;
+        opacity: .8;
+        z-index: 100;
+        
+    }
+
+    .cat-menu-container{
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        z-index: 200;
+        max-width: 350px;
+        width: 100%;
+        height:100%;
+        background: $gray-100;
+        left:-400px;
+
+        .cat-menu-header{
+            background: $robo-violet;
+            color: $gray-100;
+            padding:$spacer $spacer/2;
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                display: flex;
+                align-items: center;
+            }
+
+            img{
+                width:50%;
+                height:auto;
+            }
+
+            .cat-menu-close a{
+                display: block;
+                padding: $spacer/2;
+                line-height: 1;
+            }
+        }
+
+        .cat-menu-body{
+            position:relative;
+            height:100%;
+            font-size: 1rem;
+            text-transform: uppercase;
+            line-height: 1;
+            overflow: hidden;
+
+            .cat-menu-title{
+                padding: $spacer;
+                background: $robo-aqua;
+                color:$robo-violet;
+                margin-bottom:0;
+                flex-grow:1;
+            }
+
+            a{
+                &:hover{
+                    text-decoration: none!important;
+                }
+            }
+            ul{
+                position: absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                overflow:hidden;
+                overflow-x:hidden;
+                overflow-y:auto;
+                list-style: none;
+                padding:0;
+                margin-bottom: 0;
+                -o-transition: all .25s;
+                -moz-transition: all .25s;
+                -webkit-transition: all .25s;
+                transition: width all .25s;
+
+                &.visible{
+                    -o-transform: translateX(0);
+                    -moz-transform: translateX(0);
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+
+                &.hidden-right{
+                    -o-transform: translateX(100%);
+                    -moz-transform: translateX(100%);                    
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+
+                &.hidden-left{
+                    -o-transform: translateX(-100%);
+                    -moz-transform: translateX(-100%);                    
+                    -webkit-transform: translateX(-100%);
+                    transform: translateX(-100%);
+                }
+
+                footer{
+                    background: $robo-violet;
+                    color: $robo-aqua;
+                    font-size: $spacer*.75;
+
+                    a{
+                        color:inherit;
+                    }
+                    
+                    .cat-menu-footer-title{
+                        color: inherit;
+                        padding: $spacer*.75 $spacer;
+                        margin:0;
+                    }
+                    
+                    li{
+                        border-bottom: none;
+
+                        &:hover{
+                            background: none;
+                        }
+                        a{
+                            display: block;
+                            width: 100%;
+                            padding: $spacer*.75 $spacer;
+
+                            &:hover{
+                                background: rgba(0,0,0,.5);
+    
+                            }
+                        }
+                    }
+                }
+            }
+
+            li{
+                border-bottom: 1px solid $gray-200;
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                flex-direction: row;
+                transition: $transition-base;
+
+                &:hover{
+                    background: $white;
+                }
+                
+                a{
+                    color: $gray-800;
+                    padding: $spacer;
+                    display: flex;
+                    align-self: center;
+
+                    &.cat-menu-next{
+                        font-size:75%;
+                    }
+                }
+            }
+        }
+    }
+}

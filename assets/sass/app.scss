@@ -1,0 +1,203 @@
+/*!
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ @import "fontawesome/fontawesome.scss";
+ @import "fontawesome/solid.scss";
+ @import "fontawesome/regular.scss";
+ @import "fontawesome/brands.scss";
+ @import "functions";
+ @import "variables";
+ @import "mixins";
+ @import "root";
+ @import "reboot";
+ @import "type";
+ @import "images";
+ @import "code";
+ @import "grid";
+ @import "tables";
+ @import "forms";
+ @import "buttons";
+ @import "transitions";
+ @import "dropdown";
+ @import "button-group";
+ @import "input-group";
+ @import "custom-forms";
+ @import "nav";
+ @import "navbar";
+ @import "card";
+ @import "breadcrumb";
+ @import "pagination";
+ @import "badge";
+ @import "jumbotron";
+ @import "alert";
+ @import "progress";
+ @import "media";
+ @import "list-group";
+ @import "close";
+ @import "modal";
+ @import "tooltip";
+ @import "popover";
+ @import "carousel";
+ @import "utilities";
+ @import "print";
+ @import "common";
+ @import "errors";
+ @import "login";
+// Bootstrap-fileinput
+@import "bootstrap-fileinput/fileinput";
+
+// My Robock
+@import "app-home";
+@import "app-home-carousel";
+@import "app-categories";
+@import "app-categories-menu";
+@import "app-products";
+@import "app-product";
+@import "app-myrobock-sidenav";
+@import "app-myrobock-dashboard-index.scss";
+@import "app-myrobock-messenger.scss";
+
+// Elements 
+.card-columns {
+    width:100%;
+    
+    @include media-breakpoint-only(sm) {
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    @include media-breakpoint-only(md) {
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    @include media-breakpoint-only(lg) {
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+  }
+
+//Banner localizado en el cintillo de la pagina
+#banner{
+    overflow: hidden;
+    width: 100%;
+
+    a{
+        display: block;
+        position: relative;
+        margin-left:50%;
+        left:-1000px;
+    }
+}
+
+body.front{
+    background: $gray-100;
+
+    #header{
+        background: $secondary;
+        color: $robo-aqua;
+        font-size: 0.875rem;
+        z-index: 2000;
+        #nav{
+            #logo{
+                display:block;
+                width: 160px;
+            }
+            a{
+                line-height: 1;
+                text-transform: uppercase;
+            }
+            .nav-link{
+                margin-top:.25rem;
+                padding: 0.5rem 1rem !important;
+            }
+            .nav-link:hover,.dropdown.show .nav-link{
+                color: $robo-violet;
+                background-color: $robo-aqua;
+            }
+            .dropdown-menu{
+                top:auto;
+                color: $robo-violet;
+                background-color: $robo-aqua;
+            }
+            .dropdown-item{
+                color:inherit
+            }
+            .dropdown-item:hover{
+                color:$robo-aqua;
+                background-color: $robo-violet;
+            }
+        }
+        
+        a{
+            color:inherit;
+        }
+        .navbar-toggler{
+            .open-nav{
+                display:none;
+            }
+            .close-nav{
+                display:block;
+            }
+        }
+        .collapsed{
+            .open-nav{
+                display:block;
+            }
+            .close-nav{
+                display:none;
+            }
+        }
+        .form-control{
+            border-color:$white;
+
+            &:focus{
+                border-color:$robo-aqua;
+            }
+        }
+    }
+
+    #layout{
+    
+        #main{
+            margin-top:$spacer;
+            margin-bottom:$spacer;
+
+            .box-container{
+                background-color: $white;
+                padding-top:$spacer;
+                width:100%;
+            }
+        }
+    }
+
+    #footer{
+        color: $white;
+        background: $robo-violet;
+
+        #back-top{
+            padding: $spacer/2;
+            background: $robo-green;
+            text-align: center;
+
+            .btn-secondary{
+                color:$robo-green!important;
+            }
+        }
+
+        #footer-content{
+            padding: $spacer;
+
+            #legal-notice{
+                justify-content: space-between;
+                font-size: 75%;
+            }
+
+        }        
+    }
+}

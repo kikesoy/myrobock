@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'category' => 'Categories',
+    'deal' => 'Hot Deals',
+    'sell' => 'Sell',
+    'help' => 'Help',
+    'order' => 'Recent Orders',
+    'account' => 'My account',
+    'account_guest' => 'Account',
+    'logout' => 'Logout',
+    'login' => 'Login',
+    'register' => 'Register',
+    'cart' => 'Cart',
+    'brand' => 'Brand',
+    'make' => 'Make',
+    'year' => 'Year',
+    'part' => 'Part type',
+    'search' => 'Search',
+    'settings' => 'My settings',
+    'term' => 'Terms and conditions of use',
+    'privacy' => 'Privacy policy',
+    'work' => 'Work with us',
+    'copyright' => 'Copyright',
+    'myrobock' => 'My Robock DLL',
+    'back' => 'Back to top',
+];

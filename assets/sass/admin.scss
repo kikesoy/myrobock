@@ -1,0 +1,393 @@
+/*!
+ * Bootstrap v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ @import "fontawesome/fontawesome.scss";
+ @import "fontawesome/solid.scss";
+ @import "fontawesome/regular.scss";
+ @import "fontawesome/brands.scss";
+ @import "functions";
+ @import "variables";
+ @import "mixins";
+ @import "root";
+ @import "reboot";
+ @import "type";
+ @import "images";
+ @import "code";
+ @import "grid";
+ @import "tables";
+ @import "forms";
+ @import "buttons";
+ @import "transitions";
+ @import "dropdown";
+ @import "button-group";
+ @import "input-group";
+ @import "custom-forms";
+ @import "nav";
+ @import "navbar";
+ @import "card";
+ @import "breadcrumb";
+ @import "pagination";
+ @import "badge";
+ @import "jumbotron";
+ @import "alert";
+ @import "progress";
+ @import "media";
+ @import "list-group";
+ @import "close";
+ @import "modal";
+ @import "tooltip";
+ @import "popover";
+ @import "carousel";
+ @import "utilities";
+ @import "print";
+ @import "common";
+
+// Elementos
+// ID's
+#admin{
+    background: $gray-100;
+}
+#header{
+    background: $robo-aqua;
+    padding:.5rem 0;
+    color: $robo-violet;
+    z-index: 1000;
+
+    #logo{
+        display:block;
+        width: 120px;
+    }
+
+    a{
+        color:inherit;
+    }
+}
+
+#layout{
+    #menu{
+        position:relative;
+        top:45px;
+        background: $black;
+        z-index: 500;
+
+        .nav-item{
+            position: relative;
+
+        }
+
+        .nav-dropdown{
+            &:after{
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                position: absolute;
+                right: 1rem;
+                top:.5rem;
+                content: "\f0d7";
+            }
+        }
+
+        .activate{
+            .nav-dropdown{
+                &:after{
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    position: absolute;
+                    right: 1rem;
+                    top:.5rem;
+                    content: "\f0d8";
+                }
+            }
+        }
+
+        .nav-link{
+            color: $gray-500;
+
+            i{
+                width:1.5rem;
+                text-align: center;
+            }
+        }
+        .nav-link:hover,
+        .activate .nav-link{
+            color: $gray-200;
+            background: $gray-900;
+        }
+
+        .nav-item.active{
+
+            .nav-link{
+            color: $black;
+            background: $gray-100;
+            }
+
+            .nav-sub-menu{
+                display:block;
+            }
+        }
+        .nav-sub-menu{
+            display: none;
+            position: relative;
+            top:0;
+            left:0;
+            width:100%;
+
+            .nav-item{
+                .nav-link{
+                    color: $gray-400;
+                    background: $gray-800;
+                    padding-left: 2.5rem;
+                    }
+                .nav-link:hover{
+                    color: $gray-200;
+                    background: $gray-700;
+                }
+                &.active{
+                    .nav-link{
+                        color: $black;
+                        background: $gray-200;
+                    }
+                    .nav-link:hover{
+                        color: $gray-200;
+                        background: $gray-700;
+                    }
+                }
+            }
+        }
+    }
+
+    #main{
+    position: relative;
+    top:50px;
+
+    .box-content-admin{
+        background: $white;
+        @include border-radius($card-border-radius);
+
+        header{
+            padding:$spacer;
+
+            h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+                margin-bottom:0;
+            }
+            }
+            footer{
+            background:$robo-violet;
+            color:$white;
+            text-align: right;
+            padding:$spacer;
+
+            ul{
+                margin-bottom: 0;
+            }
+
+            .page-link {
+                color: $robo-violet;
+                background-color: $pagination-bg;
+                border: $pagination-border-width solid $white;
+
+                &:hover {
+                    color:$white;
+                    background-color: $robo-violet;
+                    border-color: $pagination-hover-border-color;
+                }
+            }
+
+            .page-item {
+                &.active .page-link {
+                    color: $pagination-active-color;
+                    background-color: $robo-violet;
+                    border-color: $white;
+                }
+
+                &.disabled .page-link {
+                    color: $pagination-disabled-color;
+                    pointer-events: none;
+                    // Opinionated: remove the "hand" cursor set previously for .page-link
+                    cursor: auto;
+                    background-color: $pagination-disabled-bg;
+                    border-color: $pagination-disabled-border-color;
+                }
+
+                &.disabled .page-link {
+                    border-color: $white;
+                    }
+            }
+            }
+
+            dl{
+                margin:0;
+            }
+
+            .table{
+                th{
+                    white-space: nowrap;
+                }
+            }
+
+            .table-striped {
+                tbody tr:nth-of-type(#{$table-striped-order}) {
+                    background-color: rgba($robo-aqua, .15);
+                }
+            }
+
+            .form-inline label{
+                margin:auto $spacer/2
+            }
+        }
+        .nav-tabs{
+            border:none;
+            .nav-link{
+                border-bottom: none;
+
+                &:hover{
+                    border-color: $gray-100;
+                }
+            }
+            .nav-link.active, .nav-item.show .nav-link{
+                background: $gray-100; 
+                border-color: $gray-100; 
+            }
+        }
+
+        .tab-content{
+            background: $gray-100;
+            padding: $spacer;
+            padding-bottom: 0;
+            overflow: hidden;
+            @include border-bottom-radius($nav-tabs-border-radius);
+        }
+    }
+    .nav-breadcrumb{
+        font-size: .75rem;
+        text-transform: uppercase;
+    }
+    // MEDIA QUERIES #MAIN
+    @media (min-width: 768px){
+        #menu{
+            position: fixed;
+            bottom: 0;
+            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .nav-sub-menu{
+                position: relative;
+                width:100%;
+            }
+        }
+        #menu-collapse{
+            display: block;
+        }
+    }
+}
+
+// MODALES
+.modal{
+    .modal-body{
+
+        .user-status {
+            background: $gray-100;
+            @include border-radius($card-border-radius);
+            padding:1rem 0;
+            margin-bottom:1rem;
+
+            div{
+                border:none;
+                border-left:1px solid $gray-200;
+                width: 33.33%;
+                text-align: center;
+
+                &:first-child{
+                    border-left:none;
+                }
+            }
+
+            i{
+                display: block;
+            }
+        }
+    }
+}
+
+// Estilos para el árbol de categorías
+.tree{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 0;
+
+    .indicator {
+        margin-right: 5px;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        margin-left: 1.5rem;
+        list-style: none;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-left: 1px solid
+        }
+        li{
+            &:before {
+                content: "";
+                display: block;
+                width: .7rem;
+                height: 0;
+                border-top: 1px solid;
+                margin-top: -1px;
+                position: absolute;
+                top: 1rem;
+                left: 0
+            }
+
+            &:last-child:before {
+                background: #fff;
+                height: auto;
+                top: 1rem;
+                bottom: 0
+            }
+
+            ul {
+                margin-left: 1.5rem;
+            }
+        } 
+    } 
+
+    li {
+        margin: 0;
+        padding: 0 1rem;
+        line-height: 2rem;
+        color: $black;
+        position: relative;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        button,
+        button:active,
+        button:focus {
+            text-decoration: none;
+            color: $black;
+            border: none;
+            background: transparent;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            outline: 0;
+        }
+    }
+}

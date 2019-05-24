@@ -1,0 +1,29 @@
+//Carrusel del homepage con los sliders promocionales de cada temporada
+#home-slider{
+    .carousel-indicators{
+        bottom:$home-slider-height;
+        margin-bottom: 0;
+    }
+    .carousel-control-prev, 
+    .carousel-control-next{
+        bottom: $home-slider-height;
+        width: auto;
+
+        i{
+            font-size: 2rem;
+        }
+    }
+    .carousel-control-prev{
+        left:$spacer/2;
+    }
+    .carousel-control-next{
+        right:$spacer/2;
+    }
+    .carousel-item{
+        img{
+            position: relative;
+            left:-1000px;
+            margin-left:50%
+        }
+    }
+}

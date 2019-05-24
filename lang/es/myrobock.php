@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'category' => 'Categorías',
+    'deal' => 'Mejores ofertas',
+    'sell' => 'Vender',
+    'help' => 'Ayuda',
+    'order' => 'Órdenes recientes',
+    'account' => 'Mi cuenta',
+    'account_guest' => 'Cuenta',
+    'logout' => 'Cerrar sesión',
+    'login' => 'Iniciar sesión',
+    'register' => 'Registrar',
+    'cart' => 'Carrito',
+    'brand' => 'Marca',
+    'make' => 'Fabricante',
+    'year' => 'Año',
+    'part' => 'Tipo de parte',
+    'search' => 'Buscar',
+    'settings' => 'Mi configuración',
+    'term' => 'Términos y condiciones de uso',
+    'privacy' => 'Política de provacidad',
+    'work' => 'Trabajo con nosotros',
+    'copyright' => 'Copyright',
+    'myrobock' => 'My Robock DLL',
+    'back' => 'Volver arriba',
+];

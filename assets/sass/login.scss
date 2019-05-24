@@ -1,0 +1,19 @@
+body#blank{
+    background: $robo-violet;
+
+    #layout{
+        max-width:350px;
+        margin:2rem auto;
+        background: $gray-100;
+        padding: 1rem;
+        border-radius: $card-border-radius;
+    }
+    
+    #brand{
+
+        #logo{
+            display: block;
+            padding:0 12.5%;
+        }
+    }
+}

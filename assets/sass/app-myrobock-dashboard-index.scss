@@ -1,0 +1,257 @@
+.dashboard-content{
+    max-height: 70vh;
+    overflow: auto;
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+}
+
+.dashboard-head{
+    top: -60px;
+}
+
+.dashboard-size-ico{
+    font-size: x-large
+}
+
+.dashboard-card-ico{
+    display: inline-flex;
+    position: relative;
+    top: 50px;
+    color: white;
+    z-index: 2;
+    margin-left: 15px;
+    border-radius: 1.25rem;
+
+    i {
+        font-size: xx-large;
+    }
+
+}
+
+.dashboard-card-ico-orders{
+    background: #2196f3;
+}
+
+.dashboard-card-ico-favorites{
+    background: #d32f2f;
+}
+
+.dashboard-card-ico-messages{
+    background: #ff3d00;
+}
+
+.dashboard-card-ico-delivered{
+    background: #4a148c;
+}
+
+.dashboard-card-ico-product{
+    background: #2196f3;
+}
+
+.dashboard-card-ico-pay{
+    background: #43a047;
+}
+
+.dashboard-card-ico-two{
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    margin: 10px 0px 0px 15px;
+    color: white;
+    border-radius: 1.25rem;
+
+    i {
+        font-size: xx-large;
+    }
+}
+
+.dashboard-card-title{
+    padding-top: 20px;   
+    margin-bottom: 30px; 
+    margin-left: 20%;
+}
+
+.dashboard-card-title-onecard{
+    padding-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+}
+
+.dashboard-card-title-twocard{
+    padding-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+
+.dashboard-card-ico-addresses{
+    background: #ba68c8;
+}
+
+.dashboard-card-ico-whislist{
+    background: #ffc107;
+}
+
+.dashboard-card-ico-bank{
+    background: #1565c0;
+}
+
+.dashboard-card-ico-order{
+    background: #f57f17;
+}
+
+.content-addresses{
+    height: 375px;
+    max-height: 375px;
+    overflow: auto;
+
+    .addresses{
+        margin-bottom: 0 !important;
+        border-style: solid;
+        border-width: 1px 0px 1px 0px; 
+        border-color: #424242; 
+        border-radius: 0;
+    }
+    
+}
+
+.add-address{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    background-color: #ba68c8;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 3px #999;
+
+    .add-ico{
+        margin-top:17px;
+    }
+}
+
+.content-whislist{
+    height: 320px;
+    max-height: 320px;
+    overflow: auto;
+
+    .whislist{
+        margin-bottom: 0 !important;
+        border-style: solid;
+        border-width: 1px 0px 1px 0px; 
+        border-color: #424242; 
+        border-radius: 0;
+
+        img{
+            width: 120px;
+            padding: 15px;
+        }
+    }
+}
+
+.card-whislist-select{
+    width: 30%;
+    display: inline-block;
+}
+
+.card-whislist-btn-cart{
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.content-product-table{
+    max-height: 395px;
+    overflow: auto;
+}
+
+.kpi-table-product-active{
+    background: #00c853;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.kpi-table-product-disabled{
+    background: #c62828;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.margin-zero {
+    margin: 0 !important;
+}
+
+.content-bank{
+    height: 53vh;
+    max-height: 53vh;
+    overflow: auto;
+
+    .bank-account{
+        margin-bottom: 0 !important;
+        border-style: solid;
+        border-width: 1px 0px 1px 0px; 
+        border-color: #424242; 
+        border-radius: 0;
+    }
+    
+}
+
+.add-bank{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    background-color: #1565c0;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 2px 3px #999;
+
+    .add-ico{
+        margin-top:17px;
+    }
+}
+
+.add-bank:hover{
+    background-color: $robo-aqua;
+    transition: all 0.2s ease-in-out;
+}
+
+.content-order-table{
+    max-height: 51.5vh;
+    height: 51.5vh;
+    overflow: auto;
+}
+
+.kpi-table-order-invoiced{
+    background: #00c853;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.kpi-table-order-cancelled{
+    background: #c62828;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.kpi-table-order-returned{
+    background: #ff7043;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.kpi-table-order-released{
+    background: #2196f3;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}

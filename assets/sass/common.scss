@@ -1,0 +1,213 @@
+html,
+body{
+    height: 100%;
+}
+a,button{
+    transition: $transition-base;
+}
+.no-scroll{
+    overflow:hidden;
+}
+.btn{
+    font-weight:$font-weight-bold;
+}
+.btn-primary{
+    color:$white!important;
+}
+.btn-secondary{
+    color:$white!important;
+}
+
+.btn-toggle{
+    color:$gray-600;
+    background-color: $gray-100;
+    border-color: $gray-100;
+    
+}
+
+.btn-toggle-success{
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active{
+        color: $white;
+        background-color: $success;
+    } 
+}
+
+.btn-toggle-danger{
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active{
+        color: $white;
+        background-color: $danger;
+    } 
+}
+
+.show > .btn-toggle .dropdown-toggle{
+    color: $white;
+    background-color: $green;
+}
+
+
+.tinycell{
+     width: 1%;
+     white-space: nowrap;
+}
+.w-33{
+    width:33.33%;
+}
+.w-66{
+    width:66.66%;
+}
+.blurred{
+    filter:blur(.33rem);
+}
+.alert-temporal{
+    display: none;
+    width: 100%;
+    
+}
+.brand-gradient-static{
+    &:after{
+        display: block;
+        content: "";
+        @include gradient-branded($gray-500,$robo-green,$robo-aqua,$robo-coral,$robo-violet);
+        background-size: 100% 100%;
+        height:3px;
+        width:100%;
+    }
+}
+.brand-gradient{
+    &:after{
+        display: block;
+        content: "";
+        @include gradient-branded($gray-500,$robo-green,$robo-aqua,$robo-coral,$robo-violet);
+        background-size: 200% 200%;
+        -webkit-animation: GradientBranded 15s ease infinite;
+        -moz-animation: GradientBranded 15s ease infinite;
+        animation: GradientBranded 15s ease infinite;
+        height:3px;
+        width:100%;
+    }
+}
+.has-error{
+
+    input{
+        border-color:$danger;
+    }
+}
+.table-primary{
+    background: $white;
+    line-height:1;
+    margin-bottom:0;
+    thead{
+        background:$robo-aqua;
+        color:$white;
+    }
+    td,th{
+        vertical-align:middle;
+    }
+}
+.modal-myrobock{
+
+    .modal-content{
+        border:none;
+
+        .modal-header{
+            color:$white;
+            background: $robo-violet;
+            border-bottom: none;
+            padding:3rem;
+
+            .modal-brand{
+                width:33.33%;
+                height:auto;
+            }
+            
+        }
+        .modal-body{
+           padding:1rem 3rem; 
+        }
+        .modal-footer{
+           padding:1rem 3rem;
+        }
+        .alert-messages{
+            border-radius: 0;
+        }
+
+        .table{
+            tr:first-child{
+                th,td{
+                    border-top:none;
+                }
+            }
+        }
+    }
+
+    .close{
+        position: fixed;
+        top:1rem;
+        right:2rem;
+        color:$robo-green;
+        font-weight:normal;
+        text-shadow:none;
+        opacity:1;
+    }
+    .close:not(:disabled):not(.disabled):hover, 
+    .close:not(:disabled):not(.disabled):focus{
+        color:$robo-green;
+        transform:rotate(180deg);
+    }
+}
+.modal-backdrop{
+    background-color:$robo-violet;
+
+    &.show{
+        opacity: .8;
+    }
+}
+.ui-sortable{
+    
+    .ui-sortable-handle{
+        cursor:  move;
+    }
+
+    .ui-sortable-helper {
+        display: table;
+    }
+}
+
+// ANIMATIONS
+@-webkit-keyframes GradientBranded {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes GradientBranded {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes GradientBranded {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
